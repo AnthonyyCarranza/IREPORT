@@ -106,7 +106,7 @@ INNER JOIN PROFESIONAL ON PROGRAMA.PROFESIONAL_ID = PROGRAMA.PROFESIONAL_ID]]>
 		<band height="125" splitType="Stretch">
 			<image>
 				<reportElement x="10" y="3" width="173" height="122" uuid="257c3cf4-5222-4997-aef1-44240a47ca64"/>
-				<imageExpression><![CDATA["C:\\Users\\Pincay\\Pictures\\cARRANZA.png"]]></imageExpression>
+				<imageExpression><![CDATA["C:\\Users\\carranza\\Pictures\\cARRANZA.png"]]></imageExpression>
 			</image>
 		</band>
 	</pageFooter>
