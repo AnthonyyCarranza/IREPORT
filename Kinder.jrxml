@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Kinder" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="757ee03b-4eed-4162-bf3c-0f23fac65ce9">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select
+PROFESIONAL.PROFESIONAL_NOMBRE,PROFESIONAL.PROFESIONAL_APELLIDO,PROFESIONAL.PORFESIONAL_GENERO ,
+PROFESIONAL.PORFESIONAL_CERTIFICADO
+FROM PROGRAMA
+INNER JOIN PROFESIONAL ON PROGRAMA.PROFESIONAL_ID = PROGRAMA.PROFESIONAL_ID]]>
+	</queryString>
+	<field name="profesional_nombre" class="java.lang.String"/>
+	<field name="profesional_apellido" class="java.lang.String"/>
+	<field name="porfesional_genero" class="java.lang.String"/>
+	<field name="porfesional_certificado" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="90" height="50" uuid="53081180-b566-41d0-918e-474816557753"/>
+				<imageExpression><![CDATA["C:\\Users\\Pincay\\Pictures\\Base de datos\\uleam.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="113" y="25" width="349" height="43" uuid="b090ac14-90bd-4b90-a98a-402bddf08f7c"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mostrar la  cantidad de doctores y docentes que  trabajan en el Kinder
+]]></text>
+			</staticText>
+			<image>
+				<reportElement x="479" y="5" width="93" height="51" uuid="e0864b1b-8ff7-4240-b495-cbf85364091f"/>
+				<imageExpression><![CDATA["C:\\Users\\Pincay\\Pictures\\Base de datos\\facci.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="45" splitType="Stretch">
+			<staticText>
+				<reportElement x="13" y="25" width="100" height="20" uuid="2b88183f-46ef-4652-96a3-69c712491acc"/>
+				<textElement>
+					<font isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[NOMBRE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="137" y="25" width="100" height="20" uuid="979797e3-c2f5-4f79-b157-a303cf977f44"/>
+				<textElement>
+					<font isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[APELLIDO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="255" y="25" width="100" height="20" uuid="f0082aa9-59bd-46fe-bfa9-d1ec55859405"/>
+				<textElement>
+					<font isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[GENERO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="393" y="25" width="100" height="20" uuid="ccde6203-1f29-41a6-b54a-6afe9842b0ed"/>
+				<textElement>
+					<font isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[CERTIFICADO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="183" y="0" width="160" height="20" uuid="7c2ec778-a70c-43c2-8f1d-2860a9401547"/>
+				<textElement>
+					<font isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[TRABAJADORES DEL KINDER]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="13" y="0" width="100" height="20" uuid="24b28948-f7a4-4dab-8b2a-ac8173310c4c"/>
+				<textFieldExpression><![CDATA[$F{profesional_nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="137" y="0" width="100" height="20" uuid="b90ff913-322b-4949-97da-86570575b0b7"/>
+				<textFieldExpression><![CDATA[$F{profesional_apellido}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="255" y="0" width="100" height="20" uuid="25e14de1-ffd9-4f13-b377-9dafb57d68e8"/>
+				<textFieldExpression><![CDATA[$F{porfesional_genero}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="393" y="0" width="100" height="20" uuid="f8c8c18d-da8a-49d9-afc6-448af4f1f5e8"/>
+				<textFieldExpression><![CDATA[$F{porfesional_certificado}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="3" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="125" splitType="Stretch">
+			<image>
+				<reportElement x="10" y="3" width="173" height="122" uuid="257c3cf4-5222-4997-aef1-44240a47ca64"/>
+				<imageExpression><![CDATA["C:\\Users\\Pincay\\Pictures\\cARRANZA.png"]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="24" splitType="Stretch"/>
+	</summary>
+</jasperReport>
